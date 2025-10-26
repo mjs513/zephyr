@@ -13,6 +13,10 @@
 #define CRYPTO_DRV_NAME CONFIG_CRYPTO_MBEDTLS_SHIM_DRV_NAME
 #elif DT_HAS_COMPAT_STATUS_OKAY(renesas_smartbond_crypto)
 #define CRYPTO_DEV_COMPAT renesas_smartbond_crypto
+#elif DT_HAS_COMPAT_STATUS_OKAY(st_stm32_hash)
+#define CRYPTO_DEV_COMPAT st_stm32_hash
+#elif DT_HAS_COMPAT_STATUS_OKAY(espressif_esp32_sha)
+#define CRYPTO_DEV_COMPAT espressif_esp32_sha
 #else
 #error "You need to enable one crypto device"
 #endif
